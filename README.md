@@ -1,1 +1,1 @@
-# ADA Compliance Gude
+# ADA Compliance Guide
