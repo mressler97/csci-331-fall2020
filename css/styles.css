@@ -71,6 +71,55 @@ body {
   background-color: #fff;
 }
 
+
+.foot {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.oneThirdColumn{
+    width: 33.333333333%;
+    float: left;
+    height: 280px;
+    background-color: #78c2ad;
+}
+
+.oneThirdColumn ul{
+    margin: 0x;
+    padding: 0px;
+}
+
+.lastColumn{
+    border: none;
+    padding: 0px 25px;
+    height: 250px;
+    width: auto;
+    margin: 15px;
+}
+
+
+.fullpadding{
+    padding: 0px 25px;
+    border-right: 1px solid #000000;
+    height: 250px;
+    margin: 15px;
+    margin-left: 0;
+}
+
+.headingFooter{
+    color: azure;
+}
+
+.footerP{
+    margin: 0;
+    background-color: #78c2ad; 
+}
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
@@ -4321,7 +4370,8 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -5261,7 +5311,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .jumbotron {
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   background-color: #f7f7f9;
   border-radius: 0.6rem;
 }
