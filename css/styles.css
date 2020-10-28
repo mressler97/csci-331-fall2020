@@ -82,10 +82,39 @@ body {
   padding: 0px;
 }
 
+.oneFourthColumnG{
+    width: 25%;
+    float: left;
+    height: auto;
+    background-color: #78c2ad;
+}
+
+.threeFourthColumnG{
+    width: 75%;
+    float: left;
+    height: auto;
+    background-color: #78c2ad;
+}
+
+.oneFourthColumnW{
+    width: 25%;
+    float: left;
+    height: auto;
+    background-color: #f7f7f9;
+}
+
+.threeFourthColumnW{
+    width: 75%;
+    float: left;
+    height: auto;
+    background-color: #f7f7f9;
+}
+
+
 .oneThirdColumn{
     width: 33.333333333%;
     float: left;
-    height: 280px;
+    height: 300px;
     background-color: #78c2ad;
 }
 
@@ -109,6 +138,23 @@ body {
     height: 250px;
     margin: 15px;
     margin-left: 0;
+}
+
+.fullpaddingNB{
+    padding: 0px 25px;
+    height: 250px;
+    margin: 15px;
+    margin-left: 0;
+}
+
+.indexButton{
+    background-color:  #78c2ad;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    text-decoration-color: black;
+    
 }
 
 .headingFooter{
