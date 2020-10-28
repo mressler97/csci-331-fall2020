@@ -4,8 +4,8 @@
       - Johanna Ruff
       - Gabe Darity
       - John Singleton
-	    - Michael Ressler
-	    - Khbindar Arumugam
+      - Michael Ressler
+      - Khbindar Arumugam
 
 
 
