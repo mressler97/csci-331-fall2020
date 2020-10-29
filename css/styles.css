@@ -80,6 +80,14 @@ a.skip:hover {
     overflow: visible; 
 }
 
+.cont{
+  width: 75%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -544,9 +552,17 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+.leadR {
+  font-size: 1.25rem;
+  font-weight: 300;
+  float:right;
+  margin-right: 300px;
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  float:left;
 }
 
 .display-1 {
@@ -705,7 +721,7 @@ pre code {
 .container-md,
 .container-lg,
 .container-xl {
-  width: 100%;
+  width: 75%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -2672,6 +2688,7 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -2705,6 +2722,12 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #78c2ad;
   border-color: #78c2ad;
+}
+
+.btn-primary2 {
+  color: #fff;
+  background-color: #295a4c;
+  border-color: #295a4c;
 }
 
 .btn-primary:hover {
