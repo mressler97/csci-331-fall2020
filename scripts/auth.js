@@ -18,10 +18,13 @@ signupForm.addEventListener('submit', (e) => {
         console.log(cred.user);
         signupForm.reset();
         document.getElementById("loggedIn").className ="alert alert-success";
-        document.getElementById("loggedIn").innerHTML = email + "has signed up!"
+        document.getElementById("loggedIn").innerHTML = email + " has signed up!"
     });
     } else {
          document.getElementById("loggedIn").className ="alert alert-success";
          document.getElementById("loggedIn").innerHTML = "Error : password entries don't match!";
     }
-})
+});
+
+
+

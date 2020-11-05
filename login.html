@@ -52,49 +52,34 @@
     </div>
   </nav>
     
-<div class="text-center" id="content" style="padding-top:100px; margin:auto;width:15%">  
+<div class="text-center" id="content" style="padding-top:10em; width:20%;margin:auto">  
     <div id="loggedIn" role="alert"></div>
-      <form class="form-signin" id="signup-form">
-  <fieldset>
-    <div id="legend">
-       <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-    </div>
- 
-    <div class="control-group">
-      <!-- E-mail -->
-      <label class="sr-only" for="email">E-mail</label>
-      <div class="controls">
-        <input type="text" id="email" name="email" class="form-control" placeholder="Email Address" autofocus="">
-        <p class="help-block">Please provide your E-mail</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Password-->
-      <label class="sr-only" for="password">Password</label>
-      <div class="controls">
-        <input type="password" id="password" name="password" placeholder="Password" class="form-control">
-        <p class="help-block">Password should be at least 6 characters</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Password -->
-      <label class="sr-only"  for="password_confirm">Password (Confirm)</label>
-      <div class="controls">
-        <input type="password" id="password_confirm" name="password_confirm" placeholder="Password (confirm)" class="form-control">
-        <p class="help-block">Please confirm password</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Button -->
-      <div class="controls">
-        <button class="btn btn-success">Register</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
+    <form class="form-signin" id="login-form">
+        <fieldset>
+          <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <div class="control-group">
+          <label for="loginEmail" class="sr-only">Email address</label>
+          <input type="text" id="loginEmail" name="loginEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            </div>
+            <div class="control-group">
+          <label for="loginPassword" class="sr-only">Password</label>
+          <input type="password" id="loginPassword" name="loginPassword" class="form-control" placeholder="Password" required="">
+            </div>
+            <div class="control-group">
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <p class="mt-5 mb-3 text-muted">© 2020</p>
+                </div>
+            </div>
+            </fieldset>
+        </form>
     
         <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
@@ -126,7 +111,10 @@
         
       db.settings({ timestampsInSnapshots: true });
     </script>
-    <script src="scripts/auth.js"></script>
+    <script src="scripts/login.js"></script>
 </div>
 </body>
 </html>
+
+
+
