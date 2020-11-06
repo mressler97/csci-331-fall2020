@@ -22,10 +22,3 @@ loginForm.addEventListener('submit', (e) => {
   });
 
 });
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-  document.getElementById("loggedIn").className ="alert alert-success";
-  document.getElementById("loggedIn").innerHTML = user.email + " already logged in!";
-}
-});
