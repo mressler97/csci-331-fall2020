@@ -18,10 +18,8 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home
-            <span class="sr-only">(current)</span>
-          </a>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="fileFormat.html">File Formatting</a>
@@ -35,20 +33,22 @@
         <li class="nav-item">
           <a class="nav-link" href="forms.html">Forms</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="login.html">Log in</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign up</a>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="signup.html">Sign up<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.html">About Us</a>
         </li>
+    </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" href="login.html" id="user_div">Log in</a>
+        </li>
+        <li class="nav-item">
+            <a id="logout" class="nav-link" href="" onclick="logout()">Log out</a>
+          </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
     
@@ -127,6 +127,8 @@
       db.settings({ timestampsInSnapshots: true });
     </script>
     <script src="scripts/auth.js"></script>
+    <script src="scripts/logout.js"></script>
+    <script src="scripts/functions.js"></script>
 </div>
 </body>
 </html>
