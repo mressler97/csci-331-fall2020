@@ -214,6 +214,13 @@ body {
     margin-bottom: 0;
 }
 
+.fullColumnWF{
+  width: 100%;
+  float: left;
+  height: auto;
+  background-color: #f7f7f9;
+}
+
 .oneThirdColumn{
   width: 33.333333333%;
   float: left;
