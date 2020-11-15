@@ -91,6 +91,12 @@ caption {
   color: #757575;
 }
 
+/* line 609 in styles.css */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #757575;
+}
+
 /* line 726 in styles.css */
 .blockquote-footer {
   color: #757575;
@@ -113,7 +119,24 @@ caption {
 
 /* line 2178 in styles.css */
 .table .thead-light th {
+  color: #757575;
   background-color: white;
+}
+
+/* line 2267 in styles.css */
+.form-control {
+  color: #757575;
+}
+
+/* line 2294 in styles.css */
+.form-control:-moz-focusring {
+  text-shadow: 0 0 0 #757575;
+}
+
+.form-control:focus {
+  color: #757575;
+  border-color: #757575;
+  box-shadow: 0 0 0 0.2rem rgba(75, 75, 75, 0.25);
 }
 
 /* .form-control begins line 2307 in style.css*/
@@ -144,6 +167,11 @@ caption {
 }
 
 .form-control-plaintext {
+  color: #757575;
+}
+
+/* line 2346 in styles.css */
+select.form-control:focus::-ms-value {
   color: #757575;
 }
 
@@ -292,6 +320,7 @@ caption {
 .input-group-text {
   background-color: white;
   border: 1px solid #757575;
+  color: #757575;
 }
 
 /* line 4042 in styles.css */
@@ -315,16 +344,36 @@ caption {
   background-color: black;
 }
 
+/* line 4176 in styles.css */
+.custom-select {
+  color: #757575
+}
+
+/* line 4200 in styles.css */
+.custom-select:focus::-ms-value {
+  color: #757575;
+}
+
 /* line 4211 in styles.css */
 .custom-select:disabled {
   color: #757575;
   background-color: white;
 }
 
+/* line 4220 in styles.css */
+.custom-select:-moz-focusring {
+  text-shadow: 0 0 0 #757575;
+}
+
 /* line 4263 in styles.css */
 .custom-file-input[disabled] ~ .custom-file-label,
 .custom-file-input:disabled ~ .custom-file-label {
   background-color: white;
+}
+
+/* line 4276 in styles.css */
+.custom-file-label {
+  color: #757575;
 }
 
 /* line 4292 in styles.css */
@@ -365,6 +414,45 @@ caption {
   background-color: black;
 }
 
+/* line 4535 in styles.css */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #757575;
+}
+
+/* line 4892 in styles.css */
+.navbar-light .navbar-brand {
+  color: #757575;
+}
+
+/* line 4896 in styles.css */
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+  color: #757575;
+}
+
+/* line 4904 in styles.css */
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: #757575;
+}
+
+/* line 4912 in styles.css */
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #757575;
+}
+
+/* line 4932 in styles.css */
+.navbar-light .navbar-text a {
+  color: #757575;
+}
+
+/* line 4936 in styles.css */
+.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+  color: #757575;
+}
+
 /* line 5233 in styles.css */
 .breadcrumb {
   background-color: black;
@@ -400,6 +488,21 @@ a.badge-success:hover, a.badge-success:focus {
 /* line 5711 in styles.css */
 .progress-bar {
   background-color: black;
+}
+
+/* line 5771 in styles.css */
+.list-group-item-action {
+  width: 100%;
+  color: #757575;
+  text-align: inherit;
+}
+
+/* line 5777 in styles.css */
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  color: #757575;
+  text-decoration: none;
+  background-color: #f8f9fa;
 }
 
 /* line 5784 in styles.css */
@@ -485,6 +588,11 @@ margin: white;
   color: black !important;
 }
 
+/* line 10555 in styles.css */
+.btn-light, .btn-light:hover {
+  color: #757575;
+}
+
 /* line 10563 in styles.css */
 .btn-link.disabled:hover {
   color: #757575;
@@ -530,6 +638,11 @@ margin: white;
 .alert-light,
 .alert-light a:not(.btn),
 .alert-light .alert-link {
+  color: #757575;
+}
+
+/* line 10810 in styles.css */
+.badge-light {
   color: #757575;
 }
 
