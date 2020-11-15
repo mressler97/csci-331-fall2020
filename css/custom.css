@@ -1,0 +1,535 @@
+/* Override bootstrap colors */
+
+:root {
+   --primary: black;
+   --gray: #757575;
+}
+
+
+/* style for div containing Quiz */
+.bs-docs-section {
+    color: black;
+}
+
+
+/* line 91 in styles.css */
+body {
+  color: #757575;
+}
+
+/* line 150 in styles.css */
+.oneFourthColumnG{
+    background-color: black;
+}
+
+/* line 157 in styles.css */
+.oneFourthColumnGF{
+  background-color: black;
+}
+
+/* line 164 in styles.css */
+.threeFourthColumnG{
+    background-color: black;
+}
+
+/* line 171 in styles.css */
+.oneFourthColumnW{
+    background-color: white;
+}
+
+.oneFourthColumnWF{
+  background-color: white;
+}
+
+.threeFourthColumnW{
+    background-color: white;
+}
+
+.threeFourthColumnWF{
+  background-color: white;
+}
+
+/* line 199 in styles.css */
+.oneFourthColumnWTop{
+    background-color: white;
+}
+
+.threeFourthColumnWTop{
+    background-color: white;
+}
+
+/* line 217 in styles.css */
+.fullColumnWF{
+  background-color: white;
+}
+
+/* line 224 in styles.css */
+.oneThirdColumn{
+  background-color: black;
+}
+
+/* line 299 in styles.css */
+.indexButton{
+    background-color:  black;
+}
+
+/* line 313 in styles.css */
+.footerP{
+    background-color: black; 
+}
+
+/* line 407 in styles.css */
+a {
+  color: black;
+}
+
+/* line 461 in styles.css */
+caption {
+  color: #757575;
+}
+
+/* line 726 in styles.css */
+.blockquote-footer {
+  color: #757575;
+}
+
+/* line 759 in styles.css */
+.figure-caption {
+  color: #757575;
+}
+
+/* line 1924 in styles.css */
+.table {
+  color: #757575;
+}
+
+/* line 1976 in styles.css */
+.table-hover tbody tr:hover {
+  color: #757575;
+}
+
+/* line 2178 in styles.css */
+.table .thead-light th {
+  background-color: white;
+}
+
+/* .form-control begins line 2307 in style.css*/
+.form-control::-webkit-input-placeholder {
+  color: #757575;
+}
+
+.form-control::-moz-placeholder {
+  color: #757575;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #757575;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #757575;
+}
+
+/* line 2327 in styles.css */
+.form-control::placeholder {
+  color: #757575;
+}
+
+/* line 2332 in styles.css */
+.form-control:disabled, .form-control[readonly] {
+  background-color: white;
+}
+
+.form-control-plaintext {
+  color: #757575;
+}
+
+/* line 2457 in styles.css */
+.form-check-input[disabled] ~ .form-check-label,
+.form-check-input:disabled ~ .form-check-label {
+  color: #757575;
+}
+
+/* line 2522 in styles.css */
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+  border-color: black;
+  box-shadow: 0 0 0 0.2rem rgba(75, 75, 75, 0.25);
+}
+
+/* line 2759 in styles.css */
+.btn {
+  color: #757575;
+}
+
+/* line 2785 in styles.css */
+.btn:hover {
+  color: #757575;
+  text-decoration: none;
+}
+
+/* line 2808 in styles.css */
+.btn-primary {
+  background-color: black;
+  border-color: black;
+}
+
+/* line 2814 in styles.css */
+.btn-primary2 {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+
+/* line 2820 in styles.css */
+.btn-primary:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+/* line 2826 in styles.css */
+.btn-primary:focus, .btn-primary.focus {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+/* line 2833 in styles.css */
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: black;
+  border-color: black;
+}
+
+/* line 2888 in styles.css */
+.btn-success {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+/* line 2894 in styles.css */
+.btn-success:hover {
+  color: white;
+  background-color: #757575;
+  border-color: #757575;
+}
+
+/* line 2900 in styles.css */
+.btn-success:focus, .btn-success.focus {
+  color: white;
+  background-color: black;
+  border-color: black;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+/* line 2913 in styles.css */
+.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #757575;
+  border-color: #757575;
+}
+
+
+.btn-outline-primary {
+  color: black;
+  border-color: black;
+}
+
+.btn-outline-primary:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: black;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background-color: black;
+  border-color: black;
+}
+
+/* line 3366 in styles.css */
+.btn-link {
+  color: black;
+}
+
+/* line 3381 in styles.css */
+.btn-link:disabled, .btn-link.disabled {
+  color: #757575;
+  pointer-events: none;
+}
+
+/* line 3472 in styles.css */
+.dropdown-menu {
+  color: #757575;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: black;
+}
+
+/* line 3637 in styles.css */
+.dropdown-divider {
+  border-top: 1px solid white;
+}
+
+/* line 3669 in styles.css */
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: #757575;
+}
+
+.dropdown-header {
+  color: #757575;
+}
+
+/* line 3935 in styles.css */
+.input-group-text {
+  background-color: white;
+  border: 1px solid #757575;
+}
+
+/* line 4042 in styles.css */
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: black;
+  background-color: black;
+}
+
+/* line 4062 in styles.css */
+.custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
+  color: #757575;
+}
+
+/* line 4066 in styles.css */
+.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: white;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+  border-color: black;
+  background-color: black;
+}
+
+/* line 4211 in styles.css */
+.custom-select:disabled {
+  color: #757575;
+  background-color: white;
+}
+
+/* line 4263 in styles.css */
+.custom-file-input[disabled] ~ .custom-file-label,
+.custom-file-input:disabled ~ .custom-file-label {
+  background-color: white;
+}
+
+/* line 4292 in styles.css */
+.custom-file-label::after {
+  color: #757575;
+  background-color: white;
+}
+/* line 4339 in styles.css */
+.custom-range::-webkit-slider-thumb {
+  background-color: black;
+}
+
+.custom-range::-moz-range-thumb {
+  background-color: black;
+}
+
+.custom-range::-ms-thumb {
+  background-color: black;
+}
+
+/* line 4505 in styles.css */
+.nav-link.disabled {
+  color: #757575;
+}
+
+/* line 4525 in styles.css */
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color: white white white;
+}
+
+/* line 4529 in styles.css */
+.nav-tabs .nav-link.disabled {
+  color: #757575;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: black;
+}
+
+/* line 5233 in styles.css */
+.breadcrumb {
+  background-color: black;
+}
+
+/* line 5281 in styles.css */
+.page-link {
+  background-color: black;
+  border: 1px solid black;
+}
+
+/* line 5402 in styles.css */
+.badge-primary {
+  background-color: black;
+}
+
+/* line 5437 in styles.css */
+a.badge-success:hover, a.badge-success:focus {
+  color: #fff;
+  background-color: black;
+}
+
+/* line 5522 in styles.css */
+.jumbotron {
+  background-color: white;
+}
+
+/* line 5700 in styles.css */
+.progress {
+  background-color: white;
+}
+
+/* line 5711 in styles.css */
+.progress-bar {
+  background-color: black;
+}
+
+/* line 5784 in styles.css */
+.list-group-item-action:active {
+  color: #757575;
+  background-color: white;
+}
+
+/* line 5807 in styles.css */
+.list-group-item.disabled, .list-group-item:disabled {
+  color: #757575;
+}
+
+/* line 5813 in styles.css */
+.list-group-item.active {
+  background-color: black;
+  border-color: black;
+}
+
+/* line 6161 in styles.css */
+.toast-header {
+  color: #757575;
+}
+
+/* line 6632 in styles.css */
+.bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^="bottom"] .popover-header::before {
+  border-bottom: 1px solid white;
+}
+
+.popover-header {
+  background-color: white;
+}
+
+/* line 6681 in styles.css */
+.popover-body {
+  color: #757575;
+}
+
+/* line 6984 in styles.css */
+.bg-primary {
+  background-color: black !important;
+}
+
+/* line 7008 in styles.css */
+a.bg-success:hover, a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: #7575 !important;
+}
+
+/* line 7112 in styles.css */
+.border-primary {
+  border-color: black !important;
+}
+
+/* line 7120 in styles.css */
+.border-success {
+  border-color: #757575 !important;
+}
+
+/* line 10255 in styles.css */
+.text-center {
+background-color: white;
+margin: white;
+}
+
+/* line 10363 in styles.css */
+.text-success {
+  color: #757575 !important;
+}
+
+/* line 10411 in styles.css */
+.text-body {
+  color: #757575 !important;
+}
+
+/* line 10415 in styles.css */
+.text-muted {
+  color: #757575 !important;
+}
+
+.text-primary {
+  color: black !important;
+}
+
+/* line 10563 in styles.css */
+.btn-link.disabled:hover {
+  color: #757575;
+}
+
+/* line 10575 in styles.css */
+.btn-outline-success {
+  color: black;
+}
+
+.btn-link, .btn-link:hover {
+  color: black;
+}
+
+.btn-outline-primary {
+  color: black;
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: black;
+}
+
+.table .thead-dark th {
+  background-color: black;
+}
+
+.alert-primary,
+.alert-primary > th,
+.alert-primary > td {
+  background-color: black;
+}
+
+/* line 10627 in styles.css */
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: #757575;
+}
+
+/* line 10800 in styles.css */
+.alert-light,
+.alert-light a:not(.btn),
+.alert-light .alert-link {
+  color: #757575;
+}
+
+
+
+
