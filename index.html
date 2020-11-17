@@ -130,31 +130,32 @@
             </p>
         </div>
     </div>
-</div>
 
-<!-- ***** JOHN: some elementary Firebase stuff *****-->
-<!-- Message input field -->
-<div class="row">
-    <div class="col-xs-12 form-group">
-        <input type="text" class="form-control input-lg" id="helloMessageInput" placeholder="Enter you Hello Message here...">
+    <!-- ***** JOHN: some elementary Firebase stuff *****-->
+    <!-- Message input field -->
+    <div class="row">
+        <div class="col-xs-12 form-group">
+            <input type="text" class="form-control input-lg" id="helloMessageInput" placeholder="Enter you Hello Message here...">
+        </div>
     </div>
-</div>
 
-<!-- Send button -->
-<div class="row">
-    <div class="col-xs-12 form-group">
-        <button class="btn btn-default btn-block btn-lg" onClick="sendHelloMessage()">Send</button>
+    <!-- Send button -->
+    <div class="row">
+        <div class="col-xs-12 form-group">
+            <button class="btn btn-default btn-block btn-lg" onClick="sendHelloMessage()">Send</button>
+        </div>
     </div>
+
+    <!-- Place to show the latest message from the database -->
+    <h2 class="text-center">Latest Hello Message</h2>
+    <h3 id="helloMessageOutput" class="text-center text-warning">
+        <span class="text-info">Latest message will appear here...</span>
+    </h3>
+
+    <!-- There's some JavaScript below that goes along with this. -->
+    <!-- ***** JOHN: END *****-->
+
 </div>
-
-<!-- Place to show the latest message from the database -->
-<h2 class="text-center">Latest Hello Message</h2>
-<h3 id="helloMessageOutput" class="text-center text-warning">
-    <span class="text-info">Latest message will appear here...</span>
-</h3>
-
-<!-- There's some JavaScript below that goes along with this. -->
-<!-- ***** JOHN: END *****-->
 
   <div class="foot">
         <div class="oneThirdColumn">
