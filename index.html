@@ -222,8 +222,8 @@
   var helloMessageReference = firebase.database().ref('helloMessage');
 
   // DOM element shortcuts.
-  var helloMessageInput = document.getElementById('helloMessageInput');
-  var helloMessageOutput= document.getElementById('helloMessageOutput');
+  var helloMessageInput  = document.getElementById('helloMessageInput');
+  var helloMessageOutput = document.getElementById('helloMessageOutput');
   
   // On every value change, refresh related DOM elements.
   helloMessageReference.on('value', function (snapshot) {
@@ -246,11 +246,9 @@
       
     // Use the database reference to set the new value.
     helloMessageReference.set(helloMessage);
-    }
+  }
 
     // ***** JOHN: END *****
-
-</script>
 </script>
 <script src="scripts/logout.js"></script>
 <script src="scripts/functions.js"></script>
