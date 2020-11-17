@@ -132,7 +132,7 @@
     </div>
 </div>
 
-<!-- ***** John: some elementary Firebase stuff *****-->
+<!-- ***** JOHN: some elementary Firebase stuff *****-->
 <!-- Message input field -->
 <div class="row">
     <div class="col-xs-12 form-group">
@@ -153,10 +153,8 @@
     <span class="text-info">Latest message will appear here...</span>
 </h3>
 
-
-
-
-<!-- ***** John: END *****-->
+<!-- There's some JavaScript below that goes along with this. -->
+<!-- ***** JOHN: END *****-->
 
   <div class="foot">
         <div class="oneThirdColumn">
@@ -217,6 +215,42 @@
   const db = firebase.firestore();
     
   db.settings({ timestampsInSnapshots: true });
+
+  // ***** JOHN: some elementary Firebase stuff ****
+
+  // Database reference to the helloMessage key.
+  var helloMessageReference = firebase.database().ref('helloMessage');
+
+  // DOM element shortcuts.
+  var helloMessageInput = document.getElementById('helloMessageInput');
+  var helloMessageOutput= document.getElementById('helloMessageOutput');
+  
+  // On every value change, refresh related DOM elements.
+  helloMessageReference.on('value', function (snapshot) {
+    helloMessageOutput.innerText = snapshot.val();
+    helloMessageInput.value = '';
+  });
+
+  // Function to save the new Hello Message to the database.
+  function sendHelloMessage() {
+    // Variable to hold the message.
+    var helloMessage = '';
+    // If no message is entered, set the sad face.
+    // Else, get the entered message.
+    if (helloMessageInput.value.length == 0) {
+      helloMessage = 'No Hello... :(';
+    }
+    else {
+      helloMessage = helloMessageInput.value;
+    }
+      
+    // Use the database reference to set the new value.
+    helloMessageReference.set(helloMessage);
+    }
+
+    // ***** JOHN: END *****
+
+</script>
 </script>
 <script src="scripts/logout.js"></script>
 <script src="scripts/functions.js"></script>
