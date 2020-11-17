@@ -23,13 +23,13 @@
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="fileFormat.html">File Formatting<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="presentation.html">Presentation</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="audioVideo.html">Audio/Video</a>
                 </li>
                 <li class="nav-item">
@@ -71,22 +71,22 @@
             <div class="oneFourthColumnWF">
                 <div class="fullpaddingNBWF">
                     <br><br><br><br>
-                    <h3>How to make a html5 compatable video</h3>
-                    <p>INFO</p>
+                    <h3>How to make a HTML5 compatable video</h3>
+                    <p>The main way to make your video HTML 5 compatable is to make sure the file is of the correct type. The three most supported formats are MP4, WebM, and Ogg. Using some kind of video conversion tool you can easily make a video into the desired type. You can also edit how certail aspects of the videos bars and menu look to further increase accessibility.</p>
                 </div>
             </div>
 
             <div class="threeFourthColumnWF">
                 <div class="fullpaddingNBWF">
                     <br><br>
-                    <p>PICTURE GOES HERE</p>
+                    <img src="images/audioCV.jpg" alt="two older people sitting next to each other on laptops" height="100%" width="100%">
                 </div>
             </div>
             
             <div class="threeFourthColumnWF">
                 <div class="fullpaddingNBWF">
                     <br><br>
-                    <p>PICTURE GOES HERE</p>
+                    <img src="images/audioVS.jpg" alt="man in suit presenting" height="100%" width="100%">
                 </div>
             </div>
 
@@ -94,7 +94,23 @@
                 <div class="fullpaddingNBWF">
                     <br><br><br><br>
                     <h3>How to give the video subtitles</h3>
-                    <p>INFO</p>
+                    <p>In order to give a video subtitles you will need to do some HTML coding. Inbetweenn the opening and closing video tag you need to mae a track tag. This should contain a label, kind, src, and srclang. these all describe the folowing. The label says this is going to be a specific language, the kind is what we are trying to make so for this it should be "subtitles", the src will go to a file you create that is a .vtt file (we will talk about this later), and lastly, srclang says what the language the src file is in.</p>
+                </div>
+            </div>
+            
+            <div class="threeFourthColumnWF">
+                <div class="fullpaddingNBWF">
+                    <br><br>
+                    <img src="images/audioSE.jpg" alt="WEBVTT [enter] [enter] 1 [enter] 00:00:00.00 --> 00:00:01.00 [enter] - Hello. [enter] [enter] 2 [enter] 00:00:01.000 --> 00:00:04.000 [enter] -Test, Test, Test. [enter] [enter] 3 [enter] 00:00:04.500 --> 00:00:06.000 [enter] -Hello." height="100%" width="100%">
+                </div>
+            </div>
+            <div class="oneFourthColumnWF">
+                <div class="fullpaddingNBWF">
+                    <br><br><br><br>
+                    <h3>Setting Up .vtt File</h3>
+                    <p> This file has specific details required for your video player to make the captions. To make the file you will need to do the following</p>
+                    <p>WEBVTT [enter] [enter] 1 [enter] 00:00:00.00 --> 00:00:01.00 [enter] (CAPTION HERE) [enter] [enter] 2 [enter] 00:00:01.00 --> . . .</p>
+                    <p> WEBVTT lets the browser know its a vtt file, 1 is the first caption, next is the timestamp for when the caption is to appear, then 2 for the second and so on and so forth. Nothing special is needed at the end of the file. The picture to the left is an example. Below is an active example on a video with a transcipt included. </p>
                 </div>
             </div>
             
