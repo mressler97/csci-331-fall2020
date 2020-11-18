@@ -251,7 +251,7 @@
     // If no message is entered, set the sad face.
     // Else, get the entered message.
 
-    var helloMessageInput = document.getElementById("helloMessageInput");
+    var helloMessageInput = document.getElementById("helloMessageInput");  // Idk why I need to repeat this here.
     if (helloMessageInput.value.length == 0) {
       helloMessage = 'No Hello... :(';
     }
@@ -263,6 +263,7 @@
     document.getElementById("helloMessageOutput").innerHTML = helloMessage;
 
     // Use the database reference to set the new value.
+    var helloMessageReference = firebase.database().ref('helloMessage');
     helloMessageReference.set(helloMessage);
   }
 
