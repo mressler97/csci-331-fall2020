@@ -135,20 +135,27 @@
     <!-- Message input field -->
     <div class="row">
         <div class="col-xs-12 form-group">
-            <input type="text" class="form-control input-lg" id="helloMessageInput" placeholder="Enter you Hello Message here...">
+            <input type="text"
+                   class="form-control input-lg"
+                   id="helloMessageInput"
+                   placeholder="Enter your Hello Message here...">
         </div>
     </div>
 
     <!-- Send button -->
     <div class="row">
         <div class="col-xs-12 form-group">
-            <button class="btn btn-default btn-block btn-lg" onClick="sendHelloMessage()">Send</button>
+            <button class="btn btn-default btn-block btn-lg"
+                    onclick="sendHelloMessage()">  <!-- John: onClick -> onclick -->
+                Send
+            </button>
         </div>
     </div>
 
     <!-- Place to show the latest message from the database -->
     <h2 class="text-center">Latest Hello Message</h2>
-    <h3 id="helloMessageOutput" class="text-center text-warning">
+    <h3 id="helloMessageOutput"
+        class="text-center text-warning">
         <span class="text-info">Latest message will appear here...</span>
     </h3>
 
@@ -228,7 +235,7 @@
   
   // On every value change, refresh related DOM elements.
   helloMessageReference.on('value', function (snapshot) {
-    helloMessageOutput.innerText = snapshot.val();
+    helloMessageOutput.innerText = snapshot.val();  // John: Why isn't this happening?
     helloMessageInput.value = '';
   });
 
