@@ -243,14 +243,13 @@
   function sendHelloMessage() {
 
     // Debugging: I am getting here!
-    alert(document.getElementById("helloMessageOutput").innerText);
-    document.getElementById("helloMessageOutput").innerHTML = "Candyman!";
+    //alert(document.getElementById("helloMessageOutput").innerText);
+    //document.getElementById("helloMessageOutput").innerHTML = "Candyman!";
 
     // Variable to hold the message.
     var helloMessage = '';
     // If no message is entered, set the sad face.
     // Else, get the entered message.
-    document.getElementById("helloMessageOutput").innerHTML = "Dumb1";
 
     if (helloMessageInput.value.length == 0) {
       helloMessage = 'No Hello... :(';
@@ -260,7 +259,7 @@
     }
     
     // Debugging:
-    document.getElementById("helloMessageOutput").innerText = "Dumb";
+    document.getElementById("helloMessageOutput").innerHTML = helloMessage;
 
     // Use the database reference to set the new value.
     helloMessageReference.set(helloMessage);
