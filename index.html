@@ -243,7 +243,7 @@
   function sendHelloMessage() {
 
     // Debugging: I am getting here!
-    //alert(document.getElementById("helloMessageOutput").innerText)
+    alert(document.getElementById("helloMessageOutput").innerText)
     document.getElementById("helloMessageOutput").innerText = "Candyman!";
 
     // Variable to hold the message.
@@ -258,7 +258,7 @@
     }
     
     // Debugging:
-    document.getElementById("helloMessageOutput").innerText = "Dumb";
+    //document.getElementById("helloMessageOutput").innerText = "Dumb";
 
     // Use the database reference to set the new value.
     helloMessageReference.set(helloMessage);
