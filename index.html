@@ -242,9 +242,9 @@
   // Function to save the new Hello Message to the database.
   function sendHelloMessage() {
 
-    // Debugging: (Am I getting here?)
-    alert(document.getElementById("helloMessageOutput").innerText)
-    document.getElementById("helloMessageOutput").innerText = "Candyman!";
+    // Debugging: I am getting here!
+    //alert(document.getElementById("helloMessageOutput").innerText)
+    //document.getElementById("helloMessageOutput").innerText = "Candyman!";
 
     // Variable to hold the message.
     var helloMessage = '';
@@ -256,7 +256,10 @@
     else {
       helloMessage = helloMessageInput.value;
     }
-      
+    
+    // Debugging:
+    document.getElementById("helloMessageOutput").innerText = helloMessage;
+
     // Use the database reference to set the new value.
     helloMessageReference.set(helloMessage);
   }
