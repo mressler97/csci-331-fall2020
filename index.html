@@ -236,7 +236,7 @@
   // On every value change, refresh related DOM elements.
   helloMessageReference.on('value', function (snapshot) {
     helloMessageOutput.innerHTML = snapshot.val();  // John: Why isn't this happening?
-    helloMessageInput.value = 'jo';
+    helloMessageInput.value = '';
   });
 
   // Function to save the new Hello Message to the database.
@@ -251,7 +251,7 @@
     // If no message is entered, set the sad face.
     // Else, get the entered message.
 
-    var helloMessageInput  = document.getElementById("HelloMessageInput");
+    var helloMessageInput = document.getElementById("helloMessageInput");
     if (helloMessageInput.value.length == 0) {
       helloMessage = 'No Hello... :(';
     }
