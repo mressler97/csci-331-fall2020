@@ -235,8 +235,8 @@
   
   // On every value change, refresh related DOM elements.
   helloMessageReference.on('value', function (snapshot) {
-    helloMessageOutput.innerText = snapshot.val();  // John: Why isn't this happening?
-    helloMessageInput.value = '';
+    helloMessageOutput.innerHTML = snapshot.val();  // John: Why isn't this happening?
+    helloMessageInput.value = 'jo';
   });
 
   // Function to save the new Hello Message to the database.
