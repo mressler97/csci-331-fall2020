@@ -5,6 +5,11 @@
    --gray: #757575;
 }
 
+/* style for helloMessage */
+#helloMessageOutput {
+    background-color: #575757;
+}
+
 
 /* style for div containing Quiz */
 .bs-docs-section {
@@ -190,6 +195,7 @@ select.form-control:focus::-ms-value {
 /* line 2759 in styles.css */
 .btn {
   color: #757575;
+
 }
 
 /* line 2785 in styles.css */
@@ -577,6 +583,11 @@ a.text-primary:hover, a.text-primary:focus {
 /* line 10363 in styles.css */
 .text-success {
   color: #757575 !important;
+}
+
+/* line 10379 in styles.css */
+.text-warning {
+  color:#88DBF2 !important;
 }
 
 /* line 10407 in styles.css */
