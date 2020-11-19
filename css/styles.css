@@ -80,6 +80,14 @@ a.skip:hover {
     overflow: visible; 
 }
 
+.cont{
+  width: 75%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -88,7 +96,7 @@ body {
   line-height: 1.5;
   color: #888;
   text-align: left;
-  background-color: #fff;
+  background-color: #d6d6d6;
 }
 
 .bTTFoot{
@@ -109,7 +117,27 @@ body {
     max-height: 100%;
 }
 
+.fileFormatBG{
+    max-width:100%;
+    max-height:75%;
+}
+
+.youtube{
+  max-width:100%;
+  max-height:75%;
+}
+
 .foot {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.eTools{
   left: 0;
   bottom: 0;
   width: 100%;
@@ -126,6 +154,13 @@ body {
     background-color: #78c2ad;
 }
 
+.oneFourthColumnGF{
+  width: 100%;
+  float: left;
+  height: 25%;
+  background-color: #78c2ad;
+}
+
 .threeFourthColumnG{
     width: 75%;
     float: left;
@@ -140,11 +175,25 @@ body {
     background-color: #f7f7f9;
 }
 
+.oneFourthColumnWF{
+  width: 60%;
+  float: left;
+  height: auto;
+  background-color: #f7f7f9;
+}
+
 .threeFourthColumnW{
     width: 75%;
     float: left;
     height: auto;
     background-color: #f7f7f9;
+}
+
+.threeFourthColumnWF{
+  width: 40%;
+  float: left;
+  height: auto;
+  background-color: #f7f7f9;
 }
 
 .oneFourthColumnWTop{
@@ -165,11 +214,25 @@ body {
     margin-bottom: 0;
 }
 
+.fullColumnWF{
+  width: 100%;
+  float: left;
+  height: auto;
+  background-color: #f7f7f9;
+}
+
 .oneThirdColumn{
-    width: 33.333333333%;
-    float: left;
-    height: 300px;
-    background-color: #78c2ad;
+  width: 33.333333333%;
+  float: left;
+  height: 300px;
+  background-color: #78c2ad;
+}
+
+.oneThirdColumnF{
+  width: 33.333333333%;
+  float: left;
+  height: 425px;
+  background-color: #fff;
 }
 
 .oneThirdColumn ul{
@@ -185,13 +248,29 @@ body {
     margin: 15px;
 }
 
+.lastColumnF{
+  border: none;
+  padding: 0px 25px;
+  height: 250px;
+  width: auto;
+  margin: 15px;
+}
+
 
 .fullpadding{
-    padding: 0px 25px;
-    border-right: 1px solid #000000;
-    height: 250px;
-    margin: 15px;
-    margin-left: 0;
+  padding: 0px 25px;
+  border-right: 1px solid #000000;
+  height: 250px;
+  margin: 15px;
+  margin-left: 0;
+}
+
+.fullpaddingF{
+  padding: 0px 25px;
+  border-right: 1px solid #000000;
+  height: 350px;
+  margin: 15px;
+  margin-left: 0;
 }
 
 .fullpaddingNB{
@@ -199,6 +278,22 @@ body {
     height: 250px;
     margin: 15px;
     margin-left: 0;
+}
+
+.fullpaddingNBF{
+  padding: 25px 25px;
+  height: 100px;
+  margin: 15px;
+  margin-left: 0;
+  text-align: center;
+  letter-spacing: 20px;
+}
+
+.fullpaddingNBWF{
+  padding: 0px 25px;
+  height: 350px;
+  margin: 15px;
+  margin-left: 0;
 }
 
 .indexButton{
@@ -212,7 +307,7 @@ body {
 }
 
 .headingFooter{
-    color: azure;
+    color: grey;
 }
 
 .footerP{
@@ -544,9 +639,17 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+.leadR {
+  font-size: 1.25rem;
+  font-weight: 300;
+  float:right;
+  margin-right: 300px;
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  float:left;
 }
 
 .display-1 {
@@ -705,7 +808,7 @@ pre code {
 .container-md,
 .container-lg,
 .container-xl {
-  width: 100%;
+  width: 75%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -2672,6 +2775,7 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -2705,6 +2809,12 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #78c2ad;
   border-color: #78c2ad;
+}
+
+.btn-primary2 {
+  color: #fff;
+  background-color: #295a4c;
+  border-color: #295a4c;
 }
 
 .btn-primary:hover {
@@ -10267,7 +10377,7 @@ a.text-info:hover, a.text-info:focus {
 }
 
 .text-warning {
-  color: #ffce67 !important;
+  color: #ffce67!important;
 }
 
 a.text-warning:hover, a.text-warning:focus {

@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ADA Compliant Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+
+<body>
+  <a name="top"></a>
+  <a href="#content" class="skip">Skip to content</a>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">ADA Compliancy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fileFormat.html">File Formatting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="presentation.html">Presentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="audioVideo.html">Audio/Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forms.html">Forms</a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="signup.html">Sign up<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+    </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" href="login.html" id="user_div">Log in</a>
+        </li>
+        <li class="nav-item">
+            <a id="logout" class="nav-link" href="" onclick="logout()">Log out</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+<div style="padding-top:9em;">
+<div class="text-center" id="content" style="padding:20px 20px 20px 20px; margin:auto;width:15%">  
+    <div id="loggedIn" role="alert"></div>
+      <form class="form-signin" id="signup-form">
+  <fieldset>
+    <div id="legend">
+       <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+    </div>
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="sr-only" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" class="form-control" placeholder="Email Address" required="" autofocus="">
+        <p class="help-block">Please provide your E-mail</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="sr-only" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" placeholder="Password" required="" class="form-control">
+        <p class="help-block">Password should be at least 6 characters</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password -->
+      <label class="sr-only"  for="password_confirm">Password (Confirm)</label>
+      <div class="controls">
+        <input type="password" id="password_confirm" name="password_confirm" placeholder="Password (confirm)" required="" class="form-control">
+        <p class="help-block">Please confirm password</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success">Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBV8h99rsDO4Mvrjq0171dXoiDspxFIJvA",
+        authDomain: "ada-compliancy.firebaseapp.com",
+        databaseURL: "https://ada-compliancy.firebaseio.com",
+        projectId: "ada-compliancy",
+        storageBucket: "ada-compliancy.appspot.com",
+        messagingSenderId: "117881400084",
+        appId: "1:117881400084:web:715bc98c99e5d86035b001",
+        measurementId: "G-EY0TCPT9C3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+        
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/logout.js"></script>
+    <script src="scripts/functions.js"></script>
+</div>
+</div>
+</body>
+</html>

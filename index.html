@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>ADA Compliant Website</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 
 <body>
@@ -17,106 +18,151 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="index.html">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">File Formatting</a>
+          <a class="nav-link" href="fileFormat.html">File Formatting</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="presentation.html">Presentation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Audio/Video</a>
+          <a class="nav-link" href="audioVideo.html">Audio/Video</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="forms.html">Forms</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="signup.html">Sign up</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
         </li>
+    </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" href="login.html" id="user_div">Log in</a>
+        </li>
+        <li class="nav-item">
+            <a id="logout" class="nav-link" href="" onclick="logout()">Log out</a>
+          </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
-    
-<div class="container" id="content">    
+
+<div class="cont" id="content">  
+
+    <div id="login_div"></div>
     <div class="heroimageDiv">
         <img src="images/heroimage.jpg" alt="snow-top mountain under clear sky" class="heroImage">
     </div>
     <div class="oneFourthColumnW">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <img src="images/homeFF.jpg" alt="rows and columns of wooden drawers" height="100%" width="100%">
         </div>
     </div>
     <div class="threeFourthColumnW">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <p>File formatting is a very important part of ADA compliance. Any file that is downloaded, be it transcripts or something similar, needs to be readily usable by a screen reader. There are several tools used to help this process. Not only do the files need to be screen reader accessable, but they also need to meet several other guidelines. Click the button below to jump to our page on file formatting.</p>
+            <p class="leadR">
+                <a class="btn btn-primary btn-lg" href="fileFormat.html" role="button">Learn more</a>
             </p>
         </div>
     </div>
     
     <div class="threeFourthColumnG">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <p>Presentation is more than just making your website attractive for your users. It is also necessary for accessibility. Many people are color blind or have difficulites making out text that does not contrast enough. Presentation also encapsulates the structure of your website. With a poor structure, someone using a screen reader could easily get lost on your website. Click the button below to head over to our page on presentation.</p>
+            <p class="lead">
+                <a class="btn btn-primary2 btn-lg" href="presentation.html" role="button">Learn more</a>
+            </p>
         </div>
     </div>
     <div class="oneFourthColumnG">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <img src="images/homeP.jpg" alt="web design wireframe drawing on desk next to phone" height="100%" width="100%">
         </div>
     </div>
     
     <div class="oneFourthColumnW">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <img src="images/homeAV.jpg" alt="headphones and a movie clapperboard" height="100%" width="100%">
         </div>
     </div>
     <div class="threeFourthColumnW">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <p>A huge issue is the lack of accessibility in terms of audio and visual content. You need to make sure to have transcipts and captions set up on all audio/visual content on your website. Head over to our Aduio/Visual page using the button below!</p>
+            <p class="leadR">
+                <a class="btn btn-primary btn-lg" href="audioVideo.html" role="button">Learn more</a>
+            </p>
         </div>
     </div>
     
     <div class="threeFourthColumnG">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <p>Many people who use screen readers or those who are visually impared will be navigating your website with a keyboard. Key trapping is an issue of which you need to be mindful. This commonly happens when the user gets to a form field and is unable to use the keyboard to get out. How do you prevent people from becoming stuck on your website (key trapping) when they navbigate with a keyboard? Use the button below to find out; it will take you straight to our cohesive lessons on forms!</p>
+            <p class="lead">
+                <a class="btn btn-primary2 btn-lg" href="forms.html" role="button">Learn more</a>
+            </p>
         </div>
     </div>
     <div class="oneFourthColumnG">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+           <img src="images/homeF.jpg" alt="A person filling out paperwork" height="100%" width="100%">
         </div>
     </div>
     
     <div class="oneFourthColumnW">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+           <img src="images/homeAU.jpg" alt="5 people bumping fists over a cluttered table" height="100%" width="100%">
         </div>
     </div>
     <div class="threeFourthColumnW">
         <div class="fullpaddingNB">
-            <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+            <p>Have any questions? Want to learn about who made the website? Or just want to look at the entirety of our site? Click the button below to go to our About Us page.</p>
+            <p class="leadR">
+                <a class="btn btn-primary btn-lg" href="about.html" role="button">Learn more</a>
+            </p>
         </div>
     </div>
+
+    <!-- ***** JOHN: some elementary Firebase stuff *****-->
+    <!-- Message input field -->
+    <div class="row">
+        <div class="col-xs-12 form-group">
+            <br>
+            <input type="text"
+                   class="form-control input-lg"
+                   id="helloMessageInput"
+                   placeholder="Enter your Hello Message here...">
+        </div>
+    </div>
+
+    <!-- Send button -->
+    <div class="row">
+        <div class="col-xs-12 form-group">
+            <button class="btn btn-default btn-block btn-lg" style="background-color: white"
+                    onclick="sendHelloMessage()">  <!-- John: onClick -> onclick -->
+                Send
+            </button>
+        </div>
+    </div>
+
+    <!-- Place to show the latest message from the database -->
+    <h2 class="text-center">Latest Hello Message</h2>
+    <h3 id="helloMessageOutput"
+        class="text-center text-warning">
+        <span class="text-info">Latest message will appear here...</span>
+    </h3>
+
+    <!-- There's some JavaScript below that goes along with this. -->
+    <!-- ***** JOHN: END *****-->
+
 </div>
 
   <div class="foot">
@@ -124,16 +170,17 @@
             <div class="fullpadding">
                 <br>
                 <h1 class="headingFooter">About Us</h1>
-                <p>We currently only have one location, but we are looking to expand our business in the near future</p>
+                <p>This site was created by Montana State University students as part of the Fall 2020 CSCI 331 course on Web Development.</p>
+                <p>Last updated: 20 November 2020</p>
                 <br>
             </div>
         </div>
         
         <div class="oneThirdColumn">
             <div class="fullpadding">
-                <a href="#top" class="bTTFoot">Back To Top</a>
+                <a href="#top" class="bTTFoot" style="color:#757575">Back To Top</a>
                 <h1 class="headingFooter">Contact Info</h1>
-                <p>You can contact us at any time by our phone number or our email address and we will get back to you as quick as we can.</p>
+                <p>You can contact us at any time by our our email addresses on the <a href="about.html" class = "text-muted">About Us</a> page, and we will get back to you as quick as we can.</p>                
                 <br>
             </div>
             <br>
@@ -143,12 +190,97 @@
             <div class="lastColumn">
                 <br>
                 <h1 class="headingFooter">Citations</h1>
-                <p>We currently only have one location, but we are looking to expand our business in the near future</p>
-                <br>
+                <p>
+                <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html" class = "text-muted">W3C Recommendation: WCAG 2.0</a>
+                </p>
+                <p>
+                    <a href="https://medium.com/@krisrivenburgh/the-ada-checklist-website-compliance-guidelines-for-2019-in-plain-english-123c1d58fad9" class = "text-muted">Kris Rivenburgh's ADA Checklist</a>
+                </p>
+                <p>Images:
+                    <a href="https://unsplash.com/" class = "text-muted">Unsplash</a>
+                </p>                <br>
                 <br>
             </div>   
         </div>
    </div> 
 </div>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script> <!-- JOHN: I added this. -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBV8h99rsDO4Mvrjq0171dXoiDspxFIJvA",
+    authDomain: "ada-compliancy.firebaseapp.com",
+    databaseURL: "https://ada-compliancy.firebaseio.com",
+    projectId: "ada-compliancy",
+    storageBucket: "ada-compliancy.appspot.com",
+    messagingSenderId: "117881400084",
+    appId: "1:117881400084:web:715bc98c99e5d86035b001",
+    measurementId: "G-EY0TCPT9C3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+    
+  db.settings({ timestampsInSnapshots: true });
+
+  // ***** JOHN: some elementary Firebase stuff ****
+
+  // Database reference to the helloMessage key.
+  var helloMessageReference = firebase.database().ref('helloMessage');
+
+  // DOM element shortcuts.
+  var helloMessageInput  = document.getElementById('helloMessageInput');
+  var helloMessageOutput = document.getElementById('helloMessageOutput');
+  
+  // On every value change, refresh related DOM elements.
+  helloMessageReference.on('value', function (snapshot) {
+    helloMessageOutput.innerHTML = snapshot.val();  // John: Why isn't this happening?
+    helloMessageInput.value = '';
+  });
+
+  // Function to save the new Hello Message to the database.
+  function sendHelloMessage() {
+
+    // Debugging: I am getting here!
+    //alert(document.getElementById("helloMessageOutput").innerText);
+    //document.getElementById("helloMessageOutput").innerHTML = "Candyman!";
+
+    // Variable to hold the message.
+    var helloMessage = '';
+    // If no message is entered, set the sad face.
+    // Else, get the entered message.
+
+    var helloMessageInput = document.getElementById("helloMessageInput");  // Idk why I need to repeat this here.
+    if (helloMessageInput.value.length == 0) {
+      helloMessage = 'No Hello... :(';
+    }
+    else {
+      helloMessage = helloMessageInput.value;
+    }
+    
+    // Debugging:
+    //document.getElementById("helloMessageOutput").innerHTML = helloMessage;
+
+    // Use the database reference to set the new value.
+    var helloMessageReference = firebase.database().ref('helloMessage');
+    helloMessageReference.set(helloMessage);
+  }
+
+    // ***** JOHN: END *****
+</script>
+<script src="scripts/logout.js"></script>
+<script src="scripts/functions.js"></script>
 </body>
 </html>
