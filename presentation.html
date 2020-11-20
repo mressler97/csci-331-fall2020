@@ -128,51 +128,47 @@
                 <div class="bs-docs-section">
                     <h2 style="text-align:center; padding-top: 40px; color: black">Quiz</h2>
                     <hr class="my-4">
+                    <form>
                     <div class="row">
                         <!-- QUIZ QUESTION 1 -->
                         <div class="col-lg-6">
                             <div class="bs-component">
-                                <form onsubmit="return false">
+                                <form>
                                     <fieldset class="form-group">
                                         <legend>Question 1</legend>
                                         <p>What is the contrast ratio required for foreground and background colors?</p>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="q1" id="q1option1" value="4 to 5">
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
                                                 4 to 5
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="q1" id="q1option2" value="4.5 to 1">
+                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
                                                 4.5 to 1
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="q1" id="q1option3" value="5 to 1">
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
                                                 5 to 1
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="q1" id="q1option4" value="None of the above">
+                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4">
                                                 None of the above
                                             </label>
                                         </div>
                                     </fieldset>
-                                    <button id="submit1" type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
-                        <h3 id="quizMessageOutput1" class="text-center text-warning">
-                            <span class="text-info">Result will appear here...</span>
-                        </h3>
                         <!-- QUIZ QUESTION 2 -->
                         <div class="col-lg-6">
                             <div class="bs-component">
                                 <form>
-                                    <fieldset>
                                         <fieldset class="form-group">
                                             <legend>Question 2</legend>
                                             <p>What is an example of when it is acceptable to use images of text?</p>
@@ -201,7 +197,6 @@
                                                 </label>
                                             </div>
                                         </fieldset>
-                                    </fieldset>
                                 </form>
                             </div>
                         </div>
@@ -211,7 +206,6 @@
                         <div class="col-lg-6">
                             <div class="bs-component">
                                 <form>
-                                    <fieldset>
                                         <fieldset class="form-group">
                                             <legend>Question 3</legend>
                                             <p>Which of the following correctly overrides the nav link color on a light-background navbar, given the following original CSS rule?</p>
@@ -241,7 +235,6 @@
                                                 </label>
                                             </div>
                                         </fieldset>
-                                    </fieldset>
                                 </form>
                             </div>
                         </div>
@@ -249,7 +242,6 @@
                         <div class="col-lg-6">
                             <div class="bs-component">
                                 <form>
-                                    <fieldset>
                                         <fieldset class="form-group">
                                             <legend>Question 4</legend>
                                             <p>Which of the following examples is accessible?</p>
@@ -278,15 +270,22 @@
                                                 </label>
                                             </div>
                                         </fieldset>
-                                    </fieldset>
                                 </form>
                             </div>
                         </div>
                     </div>
+                     <button id="submit" type="submit" class="btn btn-primary" onclick="check()">Submit</button>
+                    </form>
                 </div>
-                <br>
-                <br>
             </div>
+        <br>
+        <br>
+        <div id="answer1" role="alert"></div>
+        <div id="answer2" role="alert"></div>
+        <div id="answer3" role="alert"></div>
+        <div id="answer4" role="alert"></div>
+        <br>
+        <br>
         </div>
         <div class="foot">
             <div class="oneThirdColumn">
@@ -332,69 +331,93 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
-
+    
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
-
+    
     <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyBV8h99rsDO4Mvrjq0171dXoiDspxFIJvA",
-            authDomain: "ada-compliancy.firebaseapp.com",
-            databaseURL: "https://ada-compliancy.firebaseio.com",
-            projectId: "ada-compliancy",
-            storageBucket: "ada-compliancy.appspot.com",
-            messagingSenderId: "117881400084",
-            appId: "1:117881400084:web:715bc98c99e5d86035b001",
-            measurementId: "G-EY0TCPT9C3"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        const auth = firebase.auth();
-        const db = firebase.firestore();
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBV8h99rsDO4Mvrjq0171dXoiDspxFIJvA",
+        authDomain: "ada-compliancy.firebaseapp.com",
+        databaseURL: "https://ada-compliancy.firebaseio.com",
+        projectId: "ada-compliancy",
+        storageBucket: "ada-compliancy.appspot.com",
+        messagingSenderId: "117881400084",
+        appId: "1:117881400084:web:715bc98c99e5d86035b001",
+        measurementId: "G-EY0TCPT9C3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+        
+      db.settings({ timestampsInSnapshots: true });
 
-        db.settings({
-            timestampsInSnapshots: true
-        });
+      // quiz validation from backend
+      var ref1 = firebase.database().ref('q1-forms');
+      var ref2 = firebase.database().ref('q2-forms');
+      var ref3 = firebase.database().ref('q3-forms');
+      var ref4 = firebase.database().ref('q4-forms');
+      
+      var q1, q2, q3, q4;
+      ref1.once('value').then(function(snapshot) {
+        q1 = snapshot.val();
+      });
 
-        var submitBtn1 = document.getElementById('submit1');
+      ref2.once('value').then(function(snapshot) {
+        q2 = snapshot.val();
+      });
 
-        var q1Reference = firebase.database().ref('Q1');
-        var q1correct;
-        q1Reference.once('value').then(function(snapshot) {
-            q1correct = snapshot.val();
-        });
+      ref3.once('value').then(function(snapshot) {
+        q3 = snapshot.val();
+      });
 
-        submitBtn1.onclick = function() {
-            var q1choice = "noChoiceMade";
-            if (document.getElementById('q1option1').checked) {
-                q1choice = document.getElementById('q1option1').value;
-            }
-            if (document.getElementById('q1option2').checked) {
-                q1choice = document.getElementById('q1option2').value;
-            }
-            if (document.getElementById('q1option3').checked) {
-                q1choice = document.getElementById('q1option3').value;
-            }
-            if (document.getElementById('q1option4').checked) {
-                q1choice = document.getElementById('q1option4').value;
-            }
+      ref4.once('value').then(function(snapshot) {
+        q4 = snapshot.val();
+      });
 
-            if (q1choice == "noChoiceMade") {
-                quizMessageOutput1.innerHTML = q1choice;
-            } else {
-                if (q1choice == q1correct) {
-                    quizMessageOutput1.innerHTML = "Correct";
-                } else {
-                    quizMessageOutput1.innerHTML = "Incorrect";
-                }
-            }
-        }
+      function check() {
+        var radioButtons = document.getElementsByName("optionsRadios");
+          if (radioButtons[q1].checked == true) {
+              console.log("Q1 is true!");
+              document.getElementById("answer1").className ="alert alert-success";
+              document.getElementById("answer1").innerHTML = "Question 1 is correct!";
+
+          } else {
+              document.getElementById("answer1").className ="alert alert-danger";
+              document.getElementById("answer1").innerHTML = "Question 1 is wrong!";
+          }
+          if (radioButtons[q2].checked == true) {
+              console.log("Q2 is true!");
+              document.getElementById("answer2").className ="alert alert-success";
+              document.getElementById("answer2").innerHTML = "Question 2 is correct!";
+          } else {
+              document.getElementById("answer2").className ="alert alert-danger";
+              document.getElementById("answer2").innerHTML = "Question 2 is wrong!";
+          }
+          if (radioButtons[q3].checked == true) {
+              console.log("Q3 is true!");
+              document.getElementById("answer3").className ="alert alert-success";
+              document.getElementById("answer3").innerHTML = "Question 3 is correct!";
+          } else {
+              document.getElementById("answer3").className ="alert alert-danger";
+              document.getElementById("answer3").innerHTML = "Question 3 is wrong!";
+          }
+          if (radioButtons[q4].checked == true) {
+              console.log("Q4 is true!");
+              document.getElementById("answer4").className ="alert alert-success";
+              document.getElementById("answer4").innerHTML = "Question 4 is correct!";
+          } else {
+              document.getElementById("answer4").className ="alert alert-danger";
+              document.getElementById("answer4").innerHTML = "Question 4 is wrong!";
+          }
+      }
+
     </script>
     <script src="scripts/logout.js"></script>
     <script src="scripts/functions.js"></script>
