@@ -298,10 +298,13 @@
             helloMessageInput.value = '';
         });
 
-
-        var q1Reference = firebase.database().ref('Q1');
-
         var submitBtn = document.getElementById('submit');
+        
+        var q1Reference = firebase.database().ref('Q1');
+        var q1correct;
+        q1Reference.once('value').then(function(snapshot) {
+            q1correct = snapshot.val();
+        });
 
         submitBtn.onclick = function() {
             var q1choice = "noChoiceMade";
@@ -311,15 +314,16 @@
             if(document.getElementById('q1option4').checked) { q1choice = document.getElementById('q1option4').value; }
             //helloMessageOutput.innerHTML = q1choice;
             
-            if(q1choice === "noChoiceMade") { helloMessageOutput.innerHTML = q1choice; }
+            if(q1choice == "noChoiceMade") { helloMessageOutput.innerHTML = q1choice; }
             else {
-                if(q1choice === q1Reference) {
+                if(q1choice == q1correct) {
                     helloMessageOutput.innerHTML = "Correct";
                 }
                 else {
                     helloMessageOutput.innerHTML = "Incorrect";
                 }
             }
+            //helloMessageOutput.innerHTML = q1correct;
         }
 
         // Function to save the new Hello Message to the database.
