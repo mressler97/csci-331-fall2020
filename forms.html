@@ -79,6 +79,7 @@
                             <p class="lead">
                                 <a class="btn btn-primary btn-lg" href="signup.html" role="button">Register</a>
                             </p>
+                            
                         </div>
                 </div>
             </div>
@@ -86,7 +87,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-header">
-                        <h1 id="typography" style="text-align:center; color: black">Quick tips on Forms</h1>
+                        <h1 id="typography" style="text-align:center; color: black">Form Layout</h1>
                         <hr class="my-4">
                     </div>
                 </div>
@@ -95,34 +96,47 @@
 
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="bs-component">
-                        <h2 style="color: black">Tip 1</h2>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+
+                        <p style="padding-top:3rem">
+                            When creating an online form, there are many things to keep in mind to keep ADA compliance. Setting up a form correctly involves 
+                            paying attention to your form layout and input design.
                         </p>
                         <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <em>Nullam id dolor id nibh ultricies vehicula.</em>
+                            An example of the design process of a form can be seen to the right. It may seem enough for a form to highlight an incorrect field as red, but 
+                            that is not enough to be ADA compliant. A form should inform the user of the error which can be done using JavaScript 
+                            (that way, a screen reader will read out the error while reading over the label).
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bs-component">
+                        <img src="images/ADA-form.png" alt="Example of a bad and good form" style="width:100%;height:auto;padding:20px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bs-component">
+                        <p>
+                            When there is more than one <code>input</code> element, a <code>fieldset</code> element should be used to group them if they are related. 
+
+                            Placeholder text for forms and other inputs (for example, a search bar) is not enough alone for assistive technology to pick up on. 
+                            All fields should be using either a label=”” or title=”” attribute in conjunction and placed immediately to the left of the fillable field.
+                            Labels should be unique for each field and not used on more than one field. This is due to screen readers not supporting labels that have been 
+                            associated to multiple form fields or fields that have more than one label associated to them.
                         </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="bs-component">
-                        <h2 style="color:black">Tip 2</h2>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-                        </p>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <em>Nullam id dolor id nibh ultricies vehicula.</em>
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="bs-component">
-                        <h2 style="color:black">Tip 3</h2>
+                        <h2 style="color:black">Form Inputs</h2>
                         <p>
                             Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
                         </p>
@@ -132,6 +146,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-4">
                     <div class="bs-component">
@@ -170,6 +185,20 @@
                     </div>
                 </div>
             </div>
+            <div class="row"> 
+                <div class="col-lg-8">
+                    <div class="bs-component" style="padding-top:25px;">
+                        <h2 style="color: black">Google Forms</h2>
+                        <p>There are many programs and resources available that will create forms for you. Our team reccomends Google forms which are ADA compliant.
+                            When setting up a Google form, it is important to provide an introduction and instructions in the provided text box to keep ADA compliancy.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bs-component">
+                        <img src="images/google_forms.png" alt="Google forms image" style="width:100%;height:auto;padding:20px;">
+                    </div>
+                </div>
         </div>
 
 
