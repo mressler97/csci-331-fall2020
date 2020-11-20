@@ -223,8 +223,8 @@
 
                     <div class="col-lg-6">
                         <div class="bs-component">
-            
-                                <fieldset>
+
+                                <form>
                                     <fieldset class="form-group">
                                         <legend>Question 1</legend>
                                         <p>What should be included if there is more than one <code>input</code> element?</p>
@@ -253,7 +253,7 @@
                                             </label>
                                         </div>
                                     </fieldset>
-                                </fieldset>
+                                </form>
                             
                         </div>
                     </div>
@@ -261,7 +261,7 @@
                     <div class="col-lg-6">
                         <div class="bs-component">
                             
-                                <fieldset>
+                                <form>
                                     <fieldset class="form-group">
                                         <legend>Question 2</legend>
                                         <p>Each <code>input</code> element will need to include a label or title attribute in conjunction with what?</p>
@@ -290,7 +290,7 @@
                                             </label>
                                         </div>
                                     </fieldset>
-                                </fieldset>
+                                </form>
                             
                         </div>
                     </div>
@@ -300,7 +300,7 @@
                     <div class="col-lg-6">
                         <div class="bs-component">
                             
-                                <fieldset>
+                                <form>
                                     <fieldset class="form-group">
                                         <legend>Question 3</legend>
                                         <p>It is better to state a field is required than to use an asterisk. </p>
@@ -317,7 +317,7 @@
                                             </label>
                                         </div>
                                     </fieldset>
-                                </fieldset>
+                                </form>
                             
                         </div>
                     </div>
@@ -325,7 +325,7 @@
                     <div class="col-lg-6">
                         <div class="bs-component">
                             
-                                <fieldset>
+                                <form>
                                     <fieldset class="form-group">
                                         <legend>Question 4</legend>
                                         <p>In required inputs, what should be included for screen reader to understand?</p>
@@ -354,13 +354,19 @@
                                             </label>
                                         </div>
                                     </fieldset>
-                                </fieldset>
+                                </form>
                         </div>
                     </div>
                 </div>
                 <button id="submit" type="submit" class="btn btn-primary" onclick="check()">Submit</button>
             </form>
         </div>
+        <br>
+        <br>
+        <div id="answer1" role="alert"></div>
+        <div id="answer2" role="alert"></div>
+        <div id="answer3" role="alert"></div>
+        <div id="answer4" role="alert"></div>
         <br>
         <br>
     </div>
@@ -440,19 +446,57 @@
       var ref3 = firebase.database().ref('q3-forms');
       var ref4 = firebase.database().ref('q4-forms');
       
-      var q1;
+      var q1, q2, q3, q4;
       ref1.once('value').then(function(snapshot) {
         q1 = snapshot.val();
+      });
+
+      ref2.once('value').then(function(snapshot) {
+        q2 = snapshot.val();
+      });
+
+      ref3.once('value').then(function(snapshot) {
+        q3 = snapshot.val();
+      });
+
+      ref4.once('value').then(function(snapshot) {
+        q4 = snapshot.val();
       });
 
       function check() {
         var radioButtons = document.getElementsByName("optionsRadios");
           if (radioButtons[q1].checked == true) {
-              console.log(radioButtons[q1] + "is true!");
-                // edit a div or something that q1 is correct
+              console.log("Q1 is true!");
+              document.getElementById("answer1").className ="alert alert-success";
+              document.getElementById("answer1").innerHTML = "Question 1 is correct!";
+
+          } else {
+              document.getElementById("answer1").className ="alert alert-danger";
+              document.getElementById("answer1").innerHTML = "Question 1 is wrong!";
           }
-          if (radioButtons[q1].checked == true) {
-                //check next question etc. 
+          if (radioButtons[q2].checked == true) {
+              console.log("Q2 is true!");
+              document.getElementById("answer2").className ="alert alert-success";
+              document.getElementById("answer2").innerHTML = "Question 2 is correct!";
+          } else {
+              document.getElementById("answer2").className ="alert alert-danger";
+              document.getElementById("answer2").innerHTML = "Question 2 is wrong!";
+          }
+          if (radioButtons[q3].checked == true) {
+              console.log("Q3 is true!");
+              document.getElementById("answer3").className ="alert alert-success";
+              document.getElementById("answer3").innerHTML = "Question 3 is correct!";
+          } else {
+              document.getElementById("answer3").className ="alert alert-danger";
+              document.getElementById("answer3").innerHTML = "Question 3 is wrong!";
+          }
+          if (radioButtons[q4].checked == true) {
+              console.log("Q4 is true!");
+              document.getElementById("answer4").className ="alert alert-success";
+              document.getElementById("answer4").innerHTML = "Question 4 is correct!";
+          } else {
+              document.getElementById("answer4").className ="alert alert-danger";
+              document.getElementById("answer4").innerHTML = "Question 4 is wrong!";
           }
       }
 
