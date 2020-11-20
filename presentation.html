@@ -359,10 +359,10 @@
       db.settings({ timestampsInSnapshots: true });
 
       // quiz validation from backend
-      var ref1 = firebase.database().ref('q1-forms');
-      var ref2 = firebase.database().ref('q2-forms');
-      var ref3 = firebase.database().ref('q3-forms');
-      var ref4 = firebase.database().ref('q4-forms');
+      var ref1 = firebase.database().ref('q1-presentation');
+      var ref2 = firebase.database().ref('q2-presentation');
+      var ref3 = firebase.database().ref('q3-presentation');
+      var ref4 = firebase.database().ref('q4-presentation');
       
       var q1, q2, q3, q4;
       ref1.once('value').then(function(snapshot) {
