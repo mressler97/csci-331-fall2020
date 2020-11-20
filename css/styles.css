@@ -161,6 +161,13 @@ body {
   background-color: #78c2ad;
 }
 
+.oneFourthColumnGF1{
+    width: 100%;
+    float: left;
+    height: 25%;
+    background-color: white;
+}
+
 .threeFourthColumnG{
     width: 75%;
     float: left;
@@ -294,6 +301,13 @@ body {
   height: 350px;
   margin: 15px;
   margin-left: 0;
+}
+
+.fullpaddingNBWF1{
+    padding: 5px 25px 25px 5px;
+    margin: 15px;
+    text-align: center;
+
 }
 
 .indexButton{
