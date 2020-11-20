@@ -400,6 +400,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
     
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -425,6 +426,34 @@
       const db = firebase.firestore();
         
       db.settings({ timestampsInSnapshots: true });
+
+      // quiz validation from backend
+      var ref1 = firebase.database().ref('forms-q1');
+      var radioButtons = document.getElementsByName("optionsRadios");
+      var q1;
+      ref1.once('value').then(function(snapshot) {
+        q1 = snapshot.val();
+      });
+
+      function check() {
+          if (radioButtons[q1].checked == true) {
+                // edit a div or something that q1 is correct
+          }
+          if (radioButtons[q1].checked == true) {
+                //check next question etc. 
+          }
+      }
+
+      //FirebaseDatabase.DefaultInstance.GetReference("forms-q1").GetValueAsync().ContinueWith(task => {
+      //  if (task.IsFaulted) {
+          // Handle the error...
+      //  }
+      //  else if (task.IsCompleted) {
+      //    DataSnapshot snapshot = task.Result;
+          // Do something with snapshot...
+      //  }
+      //});
+
     </script>
     <script src="scripts/logout.js"></script>
     <script src="scripts/functions.js"></script>
