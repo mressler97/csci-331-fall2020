@@ -556,7 +556,7 @@ a.badge-success:hover, a.badge-success:focus {
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #7575 !important;
+  background-color: #757575 !important;
 }
 
 /* line 7112 in styles.css */
@@ -585,9 +585,16 @@ a.text-primary:hover, a.text-primary:focus {
   color: #757575 !important;
 }
 
+/* line 10371 in styles.css */
+.text-info {
+  color: #94D3E0 !important;
+  background-color: #545454;
+}
+
 /* line 10379 in styles.css */
 .text-warning {
-  color:#88DBF2 !important;
+  color:#94D3E0 !important;
+  background-color: #545454;
 }
 
 /* line 10407 in styles.css */
