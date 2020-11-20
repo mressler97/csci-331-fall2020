@@ -205,6 +205,9 @@
                 </div>
             </div>
             <br>
+            <h3 id="quizMessageOutput" class="text-center text-warning">
+            <span class="text-info">Result will appear here...</span>
+            </h3>
             <br>
         </div>
 
@@ -317,10 +320,10 @@
             if(q1choice == "noChoiceMade") { helloMessageOutput.innerHTML = q1choice; }
             else {
                 if(q1choice == q1correct) {
-                    helloMessageOutput.innerHTML = "Correct";
+                    quizMessageOutput.innerHTML = "Correct";
                 }
                 else {
-                    helloMessageOutput.innerHTML = "Incorrect";
+                    quizMessageOutput.innerHTML = "Incorrect";
                 }
             }
             //helloMessageOutput.innerHTML = q1correct;
