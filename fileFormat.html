@@ -140,74 +140,71 @@
         <div class="bs-docs-section">
             <h2 style="text-align:center; padding-top: 40px; color: black">Quiz</h2>
             <hr class="my-4">
+        <form>
             <div class="row">
                 <!-- QUIZ QUESTION 1 -->
                 <div class="col-lg-6">
                     <div class="bs-component">
-                        <form onsubmit="return false">
+                        <form>
                             <fieldset class="form-group">
                                 <legend>Question 1</legend>
                                 <p>How many file formats are there?</p>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q1" id="q1option1" value="20">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q1option1" value="20">
                                         20
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q1" id="q1option2" value="44">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q1option2" value="44">
                                         44
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q1" id="q1option3" value="32">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q1option3" value="32">
                                         32
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q1" id="q1option4" value="68">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q1option4" value="68">
                                         68
                                     </label>
                                 </div>
                             </fieldset>
-                            <button id="submit1" type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
-                <h3 id="quizMessageOutput1" class="text-center text-warning">
-                    <span class="text-info">Result will appear here...</span>
-                </h3>
                 <!-- QUIZ QUESTION 2 -->
                 <div class="col-lg-6">
                     <div class="bs-component">
-                        <form onsubmit="return false">
+                        <form>
                             <fieldset class="form-group">
                                 <legend>Question 2</legend>
                                 <p>Which tool can be used to make .pdf and .jpeg files ADA accessible?</p>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q2" id="q2option1" value="Adobe Acrobat">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q2option1" value="Adobe Acrobat">
                                         Adobe Acrobat
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q2" id="q2option2" value="Light House">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q2option2" value="Light House">
                                         Light House
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q2" id="q2option3" value="WCAG">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q2option3" value="WCAG">
                                         WCAG
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="q2" id="q2option4" value="W3C">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="q2option4" value="W3C">
                                         W3C
                                     </label>
                                 </div>
@@ -220,7 +217,7 @@
                 <!-- QUIZ QUESTION 3 -->
                 <div class="col-lg-6">
                     <div class="bs-component">
-                        <form onsubmit="return false">
+                        <form>
                             <fieldset class="form-group">
                                 <legend>Question 3</legend>
                                 <p>Select one tool from the given list which can validate a website for ADA compliance</p>
@@ -255,7 +252,7 @@
                 <!-- QUIZ QUESTION 4 -->
                 <div class="col-lg-6">
                     <div class="bs-component">
-                        <form onsubmit="return false">
+                        <form>
                             <fieldset class="form-group">
                                 <legend>Question 4</legend>
                                 <p>Why is an alternative text important for an image listed in the .pdf file?</p>
@@ -288,7 +285,15 @@
                     </div>
                 </div>
             </div>
+            <button id="submit" type="submit" class="btn btn-primary" onclick="check()">Submit</button>
+        </form>
         </div>
+        <br>
+        <br>
+        <div id="answer1" role="alert"></div>
+        <div id="answer2" role="alert"></div>
+        <div id="answer3" role="alert"></div>
+        <div id="answer4" role="alert"></div>
         <br>
         <br>
     </div>
@@ -364,31 +369,67 @@
             timestampsInSnapshots: true
         });
         
-        var submitBtn1 = document.getElementById('submit1');
+
         
-        var q1Reference = firebase.database().ref('Q1');
-        var q1correct;
-        q1Reference.once('value').then(function(snapshot) {
-            q1correct = snapshot.val();
+        var ref1 = firebase.database().ref('q1-format');
+        var ref2 = firebase.database().ref('q2-format');
+        var ref3 = firebase.database().ref('q3-format');
+        var ref4 = firebase.database().ref('q4-format');
+
+        var q1, q2, q3, q4;
+        ref1.once('value').then(function(snapshot) {
+            q1 = snapshot.val();
         });
 
-        submitBtn1.onclick = function() {
-            var q1choice = "noChoiceMade";
-            if(document.getElementById('q1option1').checked) { q1choice = document.getElementById('q1option1').value; }
-            if(document.getElementById('q1option2').checked) { q1choice = document.getElementById('q1option2').value; }
-            if(document.getElementById('q1option3').checked) { q1choice = document.getElementById('q1option3').value; }
-            if(document.getElementById('q1option4').checked) { q1choice = document.getElementById('q1option4').value; }
-            
-            if(q1choice == "noChoiceMade") { quizMessageOutput1.innerHTML = q1choice; }
-            else {
-                if(q1choice == q1correct) {
-                    quizMessageOutput1.innerHTML = "Correct";
-                }
-                else {
-                    quizMessageOutput1.innerHTML = "Incorrect";
-                }
+        ref2.once('value').then(function(snapshot) {
+            q2 = snapshot.val();
+        });
+
+        ref3.once('value').then(function(snapshot) {
+            q3 = snapshot.val();
+        });
+
+        ref4.once('value').then(function(snapshot) {
+            q4 = snapshot.val();
+        });
+
+        function check() {
+            var radioButtons = document.getElementsByName("optionsRadios");
+            if (radioButtons[q1].checked == true) {
+                console.log("Q1 is true!");
+                document.getElementById("answer1").className ="alert alert-success";
+                document.getElementById("answer1").innerHTML = "Question 1 is correct!";
+
+            } else {
+                document.getElementById("answer1").className ="alert alert-danger";
+                document.getElementById("answer1").innerHTML = "Question 1 is wrong!";
+            }
+            if (radioButtons[q2].checked == true) {
+                console.log("Q2 is true!");
+                document.getElementById("answer2").className ="alert alert-success";
+                document.getElementById("answer2").innerHTML = "Question 2 is correct!";
+            } else {
+                document.getElementById("answer2").className ="alert alert-danger";
+                document.getElementById("answer2").innerHTML = "Question 2 is wrong!";
+            }
+            if (radioButtons[q3].checked == true) {
+                console.log("Q3 is true!");
+                document.getElementById("answer3").className ="alert alert-success";
+                document.getElementById("answer3").innerHTML = "Question 3 is correct!";
+            } else {
+                document.getElementById("answer3").className ="alert alert-danger";
+                document.getElementById("answer3").innerHTML = "Question 3 is wrong!";
+            }
+            if (radioButtons[q4].checked == true) {
+                console.log("Q4 is true!");
+                document.getElementById("answer4").className ="alert alert-success";
+                document.getElementById("answer4").innerHTML = "Question 4 is correct!";
+            } else {
+                document.getElementById("answer4").className ="alert alert-danger";
+                document.getElementById("answer4").innerHTML = "Question 4 is wrong!";
             }
         }
+
     </script>
     <script src="scripts/logout.js"></script>
     <script src="scripts/functions.js"></script>
