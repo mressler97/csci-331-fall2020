@@ -324,9 +324,10 @@
             </div>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
     
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -352,6 +353,67 @@
       const db = firebase.firestore();
         
       db.settings({ timestampsInSnapshots: true });
+
+      // quiz validation from backend
+      var ref1 = firebase.database().ref('q1-audioVideo');
+      var ref2 = firebase.database().ref('q2-audioVideo');
+      var ref3 = firebase.database().ref('q3-audioVideo');
+      var ref4 = firebase.database().ref('q4-audioVideo');
+      
+      var q1, q2, q3, q4;
+      ref1.once('value').then(function(snapshot) {
+        q1 = snapshot.val();
+      });
+
+      ref2.once('value').then(function(snapshot) {
+        q2 = snapshot.val();
+      });
+
+      ref3.once('value').then(function(snapshot) {
+        q3 = snapshot.val();
+      });
+
+      ref4.once('value').then(function(snapshot) {
+        q4 = snapshot.val();
+      });
+
+      function check() {
+        var radioButtons = document.getElementsByName("optionsRadios");
+          if (radioButtons[q1].checked == true) {
+              console.log("Q1 is true!");
+              document.getElementById("answer1").className ="alert alert-success";
+              document.getElementById("answer1").innerHTML = "Question 1 is correct!";
+
+          } else {
+              document.getElementById("answer1").className ="alert alert-danger";
+              document.getElementById("answer1").innerHTML = "Question 1 is wrong!";
+          }
+          if (radioButtons[q2].checked == true) {
+              console.log("Q2 is true!");
+              document.getElementById("answer2").className ="alert alert-success";
+              document.getElementById("answer2").innerHTML = "Question 2 is correct!";
+          } else {
+              document.getElementById("answer2").className ="alert alert-danger";
+              document.getElementById("answer2").innerHTML = "Question 2 is wrong!";
+          }
+          if (radioButtons[q3].checked == true) {
+              console.log("Q3 is true!");
+              document.getElementById("answer3").className ="alert alert-success";
+              document.getElementById("answer3").innerHTML = "Question 3 is correct!";
+          } else {
+              document.getElementById("answer3").className ="alert alert-danger";
+              document.getElementById("answer3").innerHTML = "Question 3 is wrong!";
+          }
+          if (radioButtons[q4].checked == true) {
+              console.log("Q4 is true!");
+              document.getElementById("answer4").className ="alert alert-success";
+              document.getElementById("answer4").innerHTML = "Question 4 is correct!";
+          } else {
+              document.getElementById("answer4").className ="alert alert-danger";
+              document.getElementById("answer4").innerHTML = "Question 4 is wrong!";
+          }
+      }
+
     </script>
     <script src="scripts/logout.js"></script>
     <script src="scripts/functions.js"></script>
