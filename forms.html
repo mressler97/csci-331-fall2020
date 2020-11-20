@@ -79,7 +79,6 @@
                             <p class="lead">
                                 <a class="btn btn-primary btn-lg" href="signup.html" role="button">Register</a>
                             </p>
-                            
                         </div>
                 </div>
             </div>
@@ -123,10 +122,9 @@
                     <div class="bs-component">
                         <p>
                             When there is more than one <code>input</code> element, a <code>fieldset</code> element should be used to group them if they are related. 
-
-                            Placeholder text for forms and other inputs (for example, a search bar) is not enough alone for assistive technology to pick up on. 
-                            All fields should be using either a label=”” or title=”” attribute in conjunction and placed immediately to the left of the fillable field.
-                            Labels should be unique for each field and not used on more than one field. This is due to screen readers not supporting labels that have been 
+                            Each <code>input</code> element will need to inlcude a label or title attribute in conjunction with placeholder text for form inputs. Labels \
+                            should be immediately placed to the left of the field as well. This is important because placeholder text is not enough for assistive technology 
+                            to pick up on. Labels should be unique for each field and not used on more than one field. This is due to screen readers not supporting labels that have been 
                             associated to multiple form fields or fields that have more than one label associated to them.
                         </p>
                     </div>
@@ -134,53 +132,40 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="bs-component">
-                        <h2 style="color:black">Form Inputs</h2>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-                        </p>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <em>Nullam id dolor id nibh ultricies vehicula.</em>
-                        </p>
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1 id="typography" style="text-align:center; color: black">Form Inputs</h1>
+                        <hr class="my-4">
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="bs-component">
-                        <h2 style="color:black">Tip 4</h2>
                         <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                            There are a wide range of different inputs a form can receive including text inputs, textarea elements, telephone numbers, address entry, select elements, checkboxes, 
+                            radio buttons, and date inputs. Depending on the input type, there are some basic structure your form needs to be ADA compliant.
+                        <p>
+                            All form inputs should have a related, unique label that either wraps it, or precedes it. The label for attribute should match its input’s id element, 
+                            regardless of whether it wraps the element or not.
                         </p>
                         <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <em>Nullam id dolor id nibh ultricies vehicula.</em>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="bs-component">
-                        <h2 style="color:black">Tip 5</h2>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-                        </p>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <em>Nullam id dolor id nibh ultricies vehicula.</em>
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="bs-component">
-                        <h2 style="color:black">Tip 6</h2>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-                        </p>
-                        <p>
-                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <em>Nullam id dolor id nibh ultricies vehicula.</em>
+                            If the input is required, put “Required” or “(required)” within a span in the label. Using just <code>*</code> to indicate required inputs will not often get picked up
+                            by screen readers.
+                            <ul>
+                                <li>
+                                    For example: <code>&lt;label for="name"&gt;"First Name"&lt;span&gt;(required)&lt;/span&gt;&lt;/label&gt;</code> would be the correct format.
+                                </li>
+                                <li>
+                                    Within the input, using an HTML 5 <code>required=''</code> attribute will allow for JavaScript form validation. The screen reader will also be able to read this.
+                                </li>
+                                <li>
+                                    In required inputs, include a regular expression pattern information for screen readers to understand.
+                                </li>
+                            </ul>
+                            When it comes to using CSS with forms, the element order should not be arranged with CSS. Form controls should be displayed to the user in the same order as they are written 
+                            with HTML. This relates to ADA compliancy because screen readers  narrate forms in the order the appear in the HTML file.
                         </p>
                     </div>
                 </div>
@@ -199,8 +184,34 @@
                         <img src="images/google_forms.png" alt="Google forms image" style="width:100%;height:auto;padding:20px;">
                     </div>
                 </div>
-        </div>
+            </div>
 
+            <div class="row" style="padding-top:3rem;">
+                <div class="col-lg-12">
+                    <div class="bs-component">
+                        <h2 id="typography" style="text-align:center; color: black">Why is it important for ADA compliant forms?</h2>
+                        <p>
+                            People with disabilities benefit from accessible forms which can become visually and cognitively complex without proper structure. Following a ADA compliant 
+                            form layout allows all users to enjoy it.
+
+                            <ul>
+                                <li>
+                                    People with cognitive disabilities can better understand accessible forms since they have improved layout structure, instructions and feedback.
+                                </li>
+                                <li>
+                                    People with limited dexterity benefit from large clickable labels which can be created for checkboxes and radio buttons. 
+                                </li>
+                                <li>
+                                    People using speech input benefit from using form labels via voice coomands to select a field or activate a control.
+                                </li>
+                                <li>
+                                    People who need screen readers can find and understand form controls due to proper labels, fieldsets and other elements.
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
         <div class="bs-docs-section">
@@ -216,28 +227,29 @@
                                 <fieldset>
                                     <fieldset class="form-group">
                                         <legend>Question 1</legend>
+                                        <p>What should be included if there is more than one <code>input</code> element?</p>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
-                                                Option one is this and that—be sure to include why it's great
+                                                <code>label</code>
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                                                Option two can be something else and selecting it will deselect option one
+                                                <code>fieldset</code>
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-                                                This is option three
+                                                <code>legend</code>
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4">
-                                                All of the above
+                                                None of the above
                                             </label>
                                         </div>
                                     </fieldset>
@@ -252,22 +264,23 @@
                                 <fieldset>
                                     <fieldset class="form-group">
                                         <legend>Question 2</legend>
+                                        <p>Each <code>input</code> element will need to include a label or title attribute in conjunction with what?</p>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios5" value="option5">
-                                                Option one is this and that—be sure to include why it's great
+                                                Legend
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios6" value="option6">
-                                                Option two can be something else and selecting it will deselect option one
+                                                Descriptive instructions
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios7" value="option7">
-                                                This is option three
+                                                Placeholder text
                                             </label>
                                         </div>
                                         <div class="form-check">
@@ -290,28 +303,17 @@
                                 <fieldset>
                                     <fieldset class="form-group">
                                         <legend>Question 3</legend>
+                                        <p>It is better to state a field is required than to use an asterisk. </p>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios9" value="option9">
-                                                Option one is this and that—be sure to include why it's great
+                                                True
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios10" value="option10">
-                                                Option two can be something else and selecting it will deselect option one
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios11" value="option11">
-                                                This is option three
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios12" value="option12">
-                                                All of the above
+                                                False
                                             </label>
                                         </div>
                                     </fieldset>
@@ -326,28 +328,29 @@
                                 <fieldset>
                                     <fieldset class="form-group">
                                         <legend>Question 4</legend>
+                                        <p>In required inputs, what should be included for screen reader to understand?</p>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios13" value="option13">
-                                                Option one is this and that—be sure to include why it's great
+                                                Regular expression pattern
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios14" value="option14">
-                                                Option two can be something else and selecting it will deselect option one
+                                                Legend
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios15" value="option15">
-                                                This is option three
+                                                Descriptive title
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios16" value="option16">
-                                                All of the above
+                                                None of the Above
                                             </label>
                                         </div>
                                     </fieldset>
@@ -433,6 +436,9 @@
 
       // quiz validation from backend
       var ref1 = firebase.database().ref('q1-forms');
+      var ref2 = firebase.database().ref('q2-forms');
+      var ref3 = firebase.database().ref('q3-forms');
+      var ref4 = firebase.database().ref('q4-forms');
       
       var q1;
       ref1.once('value').then(function(snapshot) {
@@ -442,23 +448,13 @@
       function check() {
         var radioButtons = document.getElementsByName("optionsRadios");
           if (radioButtons[q1].checked == true) {
-              console.log(radioButtons[q1] + "is true!")
+              console.log(radioButtons[q1] + "is true!");
                 // edit a div or something that q1 is correct
           }
           if (radioButtons[q1].checked == true) {
                 //check next question etc. 
           }
       }
-
-      //FirebaseDatabase.DefaultInstance.GetReference("forms-q1").GetValueAsync().ContinueWith(task => {
-      //  if (task.IsFaulted) {
-          // Handle the error...
-      //  }
-      //  else if (task.IsCompleted) {
-      //    DataSnapshot snapshot = task.Result;
-          // Do something with snapshot...
-      //  }
-      //});
 
     </script>
     <script src="scripts/logout.js"></script>
